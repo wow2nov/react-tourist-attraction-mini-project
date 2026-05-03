@@ -1,13 +1,15 @@
 import HompageContainer from "./pages/Homepage.container";
+// import FetchTripsDemo from "./pages/FetchTripsDemo";
 import "./App.css";
 
 function App() {
   return (
     <div>
+      {/* หน้าตัวอย่าง fetch + state — อยากกลับหน้าเดิมให้สลับเป็น HompageContainer */}
+      {/* <FetchTripsDemo /> */}
       <HompageContainer />
     </div>
   );
-  // return <div className="text-blue-400 text-3xl flex justify-center m-20">เที่ยวไหนดี</div>;
 }
 
 // App.js > HompageContainer > HompageComponent > Title, title.css
