@@ -64,8 +64,8 @@ const SearchResult = (props) => {
                   return strTag;
                 })}
               </div>
-              <div className=" w-full flex justify-between flex-col md:flex-row gap-2 ">
-                <div className="flex justify-between gap-1 ">
+              <div className="flex w-full flex-col justify-between gap-2 md:flex-row ">
+                <div className="mt-4 grid grid-cols-3 gap-1.5 md:gap-2">
                   {/* <div class="rounded ">
                     <img
                       className="rounded-xl md:w-25 md:h-25 mt-4"
@@ -74,10 +74,14 @@ const SearchResult = (props) => {
                   </div> */}
                   {trip.photos.slice(1).map((photo) => {
                     return (
-                      <div className="rounded" key={photo}>
+                      <div
+                        key={photo}
+                        className="aspect-square overflow-hidden md:aspect-auto"
+                      >
                         <img
-                          className="rounded-xl md:w-25 md:h-25 mt-4"
+                          className="h-full w-full object-cover md:w-25 md:h-25 rounded-xl"
                           src={photo}
+                          alt=""
                         />
                       </div>
                     );
@@ -115,47 +119,3 @@ const HomepageComponent = (props) => {
 
 export default HomepageComponent;
 
-// const Detail = () => {
-//   return (
-//     <div className="flex justify-between">
-//       <div>Left</div>
-//       <div>Right</div>
-//     </div>
-//   );
-// };
-
-// const Title = () => {
-//   return <div>Title</div>;
-// };
-
-// const HompageComponent = (props) => {
-//   let { count, setCount } = props;
-//   return (
-//     <div>
-//       <Title />
-//       <Detail />
-//       {count}
-//       <button
-//         className="h-4 bg-amber-200 p-5"
-//         onClick={() => {
-//           setCount(count + 1);
-//           //   count++;
-//           //   console.log(count);
-//         }}
-//       >
-//         +
-//       </button>
-//       <button
-//         className="h-4 bg-amber-200 p-5"
-//         onClick={() => {
-//           //   count--;
-//           setCount(count - 1);
-//         }}
-//       >
-//         -
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default HompageComponent;
